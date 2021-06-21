@@ -1,0 +1,15 @@
+@import "./screen";
+
+.shared--container{ position: relative; width: 100%; box-sizing: border-box; padding: 1em 1em;
+    position: relative; display: grid; grid-template-columns: repeat(3, 1fr); justify-items: center;
+    gap:1.5em; border-radius: .5em; margin: 2em 0em;
+    @include desktop { grid-template-columns: repeat(6, 1fr);  width: max-content;  }
+    
+  }
+  
+  .shared--icon{ list-style: none; cursor: pointer; }
+  
+  .shared-icon{ display: block; width: 50px; 
+   @include tablet { width: 40px; }
+  }
+  

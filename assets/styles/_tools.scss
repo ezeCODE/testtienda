@@ -1,0 +1,96 @@
+@import "./screen";
+
+.text-center{ text-align: center; }
+.text-end{ text-align: end; }
+
+.letter-1 { letter-spacing: 1px; }
+
+.algin-center { align-items: center; }
+.algin-start { align-items: flex-start; }
+ 
+
+.border-radius-1 { border-radius: 1em; }
+
+.border-white{ border:1px solid white; }
+.border-silver{  outline:1px solid rgb(165, 165, 165); }
+.border-bottom-silver{ border-bottom:1px solid rgb(27, 27, 27); }
+
+.max-height-dinamic{ max-height: 350px; overflow-y: scroll;
+    @include tablet { max-height: 700px; }
+    
+}
+
+
+.image-max-250px{ display: block; max-width: 250px; margin:2em auto;}
+.image-max-100px{ display: block; max-width: 100px; margin:2em auto;}
+
+.img-defualt{  position: relative; width: 100%; display: block; margin: 1em 0em;}
+ 
+.cursor-pointer { cursor: pointer; }
+
+.card-profile{ box-sizing: border-box; padding: 2em 0em; width: 100%; margin: auto; margin-top: 0em; }
+
+.card-cover{ position: relative; display: block; width: 70px; }
+
+.font-bold{ font-weight: bold; }
+
+.margin-center{ margin: auto; }
+.rigth-position { margin: auto; margin-right: 0em; }
+.margin-1-0  { margin:1em 0em; }
+.margin-2-0  { margin:2em 0em; }
+ 
+ 
+.padding-1 { box-sizing: border-box; padding: 1em ;  }
+.padding-1-0 { box-sizing: border-box; padding: 1em 0em;  }
+.padding-2-0 { box-sizing: border-box; padding: 2em 0em;  }
+.padding-4-0 { box-sizing: border-box; padding: 4em 0em;  }
+.padding-1-tablet { @include tablet{ padding: 1em;}  }
+.padding-1-desktop { @include desktop{ padding: 1em;}  }
+.padding-bottom-2 { padding-bottom: 2em; }
+
+.max-content { width: max-content;  }
+.max-100 { width: 100%;  }
+ 
+.border-1{ border-radius: 1em; }
+
+.vertical-start{ align-items: flex-start; }
+.vertical-center{ align-items: center; }
+
+.line-height-normal { line-height: normal; }
+
+.not-wrap { word-break: keep-all;  }
+
+.title , .sub-title , .sub-title-3 { font-family: 'Roboto', sans-serif; }
+
+.title {  font-size: 1.5em; font-family: 'Roboto', sans-serif; line-height: 2em;
+    @include tablet { font-size: 2em;   }
+    @include desktop { font-size: 3em;   }
+ }
+
+.sub-title { font-size: 1em;  margin: 1em 0em; 
+    @include tablet { font-size: 1.5em;   }
+    @include desktop { font-size: 2em;   }
+}
+
+.sub-title-3 { font-size: 1em;  margin: 1em 0em; line-height: normal;
+    @include tablet { font-size: 1em;   }
+    @include desktop { font-size: 1.1em;   }
+}
+
+
+.widgeth-ul{ position: relative ; margin: auto 0em; margin-top: 0em; }
+
+
+.normal-ul { position: relative; width: 100%; display: grid; grid-template-columns: repeat(1, 1fr);
+    margin: auto 0em; margin-top:0em ;
+ }  
+ 
+ .normal-li{ font-family: 'Poppins', sans-serif; color: rgb(0, 0, 0);  max-width: 100%;
+   font-size: .8em; text-align: start;  line-height: 2em; transition : all .3s linear;
+    width: max-content; cursor: pointer; 
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+   strong { font-weight: bold; }
+   @include tablet { font-size: 1em; }
+ }

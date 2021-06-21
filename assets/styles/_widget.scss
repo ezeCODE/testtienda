@@ -1,0 +1,51 @@
+@import "./screen";
+
+.widget-chat-state{ position: relative; width: 100%;  
+  border-top:1px solid rgb(238, 238, 238); border-bottom:1px solid rgb(238, 238, 238);
+box-sizing: border-box;  
+padding: 1em 1em; 
+background-image: linear-gradient(120deg, #fdfbfb 0%, rgb(197, 252, 114) 100%);
+
+}
+
+.widget{ display: flex; flex-wrap: wrap; align-items: center; gap: 1em;
+
+}
+ 
+.label-file{ font-family: 'Poppins', sans-serif; cursor: pointer; font-weight: bold;
+  color: blue; display: block; margin: 1em 0em;
+
+}
+
+.widget-icon { position: relative; top: 2px; font-size: 1em; margin-right: 1em;  }
+.widget-chat-state-active {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, rgb(197, 252, 114) 100%);
+}
+
+
+.icon-turn-on {  color: rgb(136, 201, 38); }
+.icon-turn-off { color: rgb(173, 173, 173); }
+
+.widget-turn-off{  background: silver; }
+
+
+.position-sticky{
+  position: sticky; bottom: 60px; background: rgb(255, 255, 255);
+  @include tablet {  position: sticky;  top: 60px;  }
+
+}
+
+
+.mobile-preview{ position: fixed; width: 90%; bottom: -23em; background: white; z-index: 6000;
+  border:5px solid black; border-radius: 1em; box-sizing: border-box; padding: 1em; overflow: hidden;
+ 
+  height: 600px; transition: all .5s linear;    
+  @include tablet { width: 300px; left: 5em;  box-shadow: -6px 8px 19px 0px rgba(0, 0, 0, 0.75);  }
+
+}
+
+.product-box-preview-active { bottom: 6em; }
+ 
+.mobile-footer {  position: relative; width: 100%; bottom: 0em; }
+
+.input-file{ opacity: 0; position: absolute;  }

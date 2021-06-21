@@ -1,0 +1,82 @@
+@import "./screen";
+
+@mixin button ($fs, $bg , $fc) {  word-break: break-all;
+    width: max-content; height: max-content; border: none; cursor: pointer; border-radius: 1em;
+    outline: none; font-size: $fs; background: $bg; color: $fc;
+    box-sizing: border-box; padding: 1em 32px;
+    transition:scale .5s ease-in-out ; font-family: 'Poppins', sans-serif;
+    &:hover { 
+        box-shadow: -6px 8px 19px 0px rgba(141,141,141,0.75);
+        -webkit-box-shadow: -6px 8px 19px 0px rgba(141,141,141,0.75);
+        -moz-box-shadow: -6px 8px 19px 0px rgba(141,141,141,0.75);
+    }
+    &:disabled {background: rgb(228, 228, 228); }
+    &:active { transform: scale(.9); }
+    &:focus {outline:0;}
+    span{ position: relative; top: 2px; margin-right: 2px; }
+}
+
+@mixin buttonSmall ($fs, $bg , $fc) {
+    width: max-content; border: none; cursor: pointer;  border-radius: 1em;
+    outline: none; font-size: $fs; background: $bg; color: $fc;  height: max-content; 
+    box-sizing: border-box; padding: .7em 22px;
+    transition:scale .5s ease-in-out ; font-family: 'Poppins', sans-serif;
+    &:hover { 
+        box-shadow: -6px 8px 19px 0px rgba(141,141,141,0.75);
+     
+
+     }
+    &:disabled { background: rgb(228, 228, 228); }
+    &:active { transform: scale(.9); }
+    &:focus {outline:0;}
+    span{ position: relative; top: 2px; margin-right: 2px; }
+}
+
+@mixin buttonMini ($bg , $fc, $pw, $ph) {
+
+    width: max-content; border: none; cursor: pointer;  border-radius: .5em;
+    outline: none; font-size: .7em; background: $bg; color: $fc;  height: max-content; 
+    box-sizing: border-box; padding:  $pw $ph; font-family: 'Poppins', sans-serif;
+    transition:scale .5s ease-in-out ;
+    &:hover { 
+        box-shadow: -6px 8px 19px 0px rgba(141,141,141,0.75);
+      
+    }
+    &:disabled {background: rgb(228, 228, 228); }
+    &:active { transform: scale(.9); }
+    &:focus {outline:0;}
+    span{ position: relative; top: 2px; margin-right: 2px; }
+
+}
+
+.button-mini { @include buttonMini (null, 1em, .5em, .5em);
+        @include tablet { font-size: 1em; }
+}
+
+
+ 
+.btn-float {
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); position: fixed;  
+    bottom: 4em;  right: 1em; z-index: 7000;   font-family: 'Poppins', sans-serif; font-size: 1.1em;
+    width: max-content; border-radius: 1em; cursor: pointer;
+    box-sizing: border-box; padding: 16px 20px; box-shadow: 1px 5px 8px 1px rgba(70, 70, 70, 0.616);
+  
+    @include desktop { display: none; }
+  }
+  
+  .button-send { font-weight: bold;
+    @include buttonSmall (1em, rgb(94, 245, 94) , black);
+}
+
+ 
+ .chat-btn-send{ margin: 1em 0em;
+     @include buttonSmall (.9em, #4583ca , rgb(255, 255, 255));
+ 
+ }
+  
+  
+
+.card-btn-small{ margin: 1em 0em; 
+    @include  buttonSmall (.7em, rgb(137, 255, 133) , black);
+   
+   }

@@ -1,0 +1,48 @@
+
+@import "./_screen";
+@import "./forms";
+@import "./_buttons";
+
+
+
+.brand-container{  
+  position: fixed; width: 100%; top: 0px;  max-width: 1600px; z-index: 4000;
+   background:#261718;
+   display: grid; grid-template-columns: repeat(3, auto);
+  align-items: center;  box-sizing: border-box; padding: 0em .3em;
+  @include tablet{ grid-template-columns: repeat(3, 10% 70% 20%); position: relative; }
+
+}
+
+.brand{ width: 50px; 
+  @include tablet{ width: 130px;  }
+
+}
+
+.brand-img{ position: relative; display: block; width: 100%; }
+
+.user-area{ position: relative; width: max-content; margin: auto; margin-right: 0em;
+width: max-content; align-items: center;
+@include tablet{  margin-right: 1em; }
+
+}
+
+.loader-profile{
+  margin: auto; margin-right: 1em;
+}
+
+.button-top-rigth {  font-size: .7em; text-decoration: none; color: rgb(0, 0, 0);
+  
+  @include buttonMini (null, 1em, .5em , 1em );
+  background-image: linear-gradient(to left, #a8edea 0%, #fed6e3 100%);
+  
+ @include tablet { font-size: 1em; }
+}
+
+ 
+
+.brand-label-search{ font-size: .9em; z-index: 4000; color: white; font-family: 'Poppins', sans-serif; 
+  cursor: pointer;
+   @include tablet{  font-size: 1em;  font-weight: bold; }
+   @include desktop{  font-size: 2em;  }
+}
